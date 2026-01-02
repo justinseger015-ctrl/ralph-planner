@@ -29,6 +29,9 @@ Specialized templates with pre-defined phases and **verifiable promises**:
 - `/ralph-planner:migration "<description>"` - Data/code migration
 - `/ralph-planner:performance "<description>"` - Performance optimization
 
+### From File
+- `/ralph-planner:from-file "<path>" [--type <type>]` - Create plan from existing .md file
+
 ### Help
 - `/ralph-planner:help` - Show this help message
 
