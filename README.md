@@ -16,65 +16,76 @@ Requires the [ralph-wiggum](https://github.com/anthropics/claude-code/tree/main/
 claude plugins:add anthropics/claude-code/plugins/ralph-wiggum
 ```
 
-## Usage
-
-### Create a Plan
-
-```
-/ralph-planner:plan-loop "Implement user authentication with JWT"
-```
-
-This generates a structured plan with:
-- **Phases** - Logical groupings of related tasks
-- **Completion Criteria** - Clear definition of done for each phase
-- **Promise Tag** - Commitment marker for tracking
-- **Iteration Estimate** - Calculated as `tasks × 3`
-
-### Example Output
-
-```
-## Plan: JWT Authentication Implementation
-
-### Phase 1: Setup
-**Tasks:**
-- [ ] Install JWT dependencies
-- [ ] Create auth configuration file
-- [ ] Set up environment variables
-
-**Completion Criteria:** Dependencies installed and configuration in place
-
-### Phase 2: Core Implementation
-**Tasks:**
-- [ ] Create JWT utility functions
-- [ ] Implement login endpoint
-- [ ] Implement token refresh endpoint
-
-**Completion Criteria:** All endpoints functional with valid JWT generation
-
----
-
-**Total Tasks:** 6
-**Estimated Iterations:** 18
-
-🏷️ **Promise Tag:** I will complete all phases systematically...
-
-Ready to execute? Run:
-/ralph-wiggum:ralph-loop 18 "Implement JWT authentication"
-```
-
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `/ralph-planner:plan-loop "<task>"` | Create a structured plan for the given task |
+| `/ralph-planner:plan-loop "<task>"` | Generic plan for any task |
+| `/ralph-planner:feature "<desc>"` | New feature implementation |
+| `/ralph-planner:bugfix "<desc>"` | Bug fix with regression test |
+| `/ralph-planner:refactor "<desc>"` | Code refactoring |
+| `/ralph-planner:migration "<desc>"` | Data/code migration |
+| `/ralph-planner:performance "<desc>"` | Performance optimization |
 | `/ralph-planner:help` | Show help documentation |
+
+## Work Type Templates
+
+Each template has **pre-defined phases** and **verifiable promises** optimized for the work type:
+
+### Feature
+```
+/ralph-planner:feature "Add user authentication with JWT"
+```
+**Phases:** Discovery → Implementation → Testing → Documentation
+
+**Promises:** All new tests pass, Feature works as specified, No regressions
+
+### Bugfix
+```
+/ralph-planner:bugfix "Users can't login after password reset"
+```
+**Phases:** Reproduction → Root Cause → Fix → Verification
+
+**Promises:** Bug no longer reproducible, Regression test added, No new issues
+
+### Refactor
+```
+/ralph-planner:refactor "Extract payment logic into separate service"
+```
+**Phases:** Analysis → Preparation → Refactor → Validation
+
+**Promises:** All existing tests pass, No behavior changes, Goals met
+
+### Migration
+```
+/ralph-planner:migration "Move user data from MySQL to PostgreSQL"
+```
+**Phases:** Assessment → Preparation → Migration → Verification
+
+**Promises:** All data migrated, Application functional, Rollback tested
+
+### Performance
+```
+/ralph-planner:performance "Reduce API response time for /users endpoint"
+```
+**Phases:** Baseline → Analysis → Optimization → Validation
+
+**Promises:** Metrics improved by X%, No regressions, Results documented
 
 ## How It Works
 
-1. You describe a task
-2. The plugin breaks it into phases with clear completion criteria
-3. It estimates iterations (tasks × 3) for the Ralph loop
-4. It generates the ready-to-run `/ralph-wiggum:ralph-loop` command
+1. Choose a template matching your work type (or use generic `plan-loop`)
+2. The plugin generates phases with clear completion criteria
+3. It calculates iterations estimate (`tasks × 3`)
+4. It outputs the ready-to-run `/ralph-wiggum:ralph-loop` command
+
+## Why Templates?
+
+Generic promises like *"I will complete all phases systematically"* are not verifiable. Templates provide:
+
+- **Specific phases** for each work type
+- **Verifiable promises** ("All tests pass" vs "I'll do my best")
+- **Consistent structure** for repeatable planning
 
 ## License
 

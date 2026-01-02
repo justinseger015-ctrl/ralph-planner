@@ -13,33 +13,44 @@ Companion plugin for ralph-wiggum that creates structured execution plans.
 
 ## Commands
 
-### /ralph-planner:plan-loop "<task>"
-Creates a structured plan in Ralph format with:
-- **Phases**: Logical groupings of related tasks
-- **Completion Criteria**: Clear definition of done for each phase
-- **Promise Tag**: Commitment marker for systematic execution
-- **Iteration Estimate**: Calculated as tasks × 3
+### Generic Planning
+- `/ralph-planner:plan-loop "<task>"` - Create a plan for any task
 
-Auto-generates the `/ralph-wiggum:ralph-loop` command ready to execute.
+### Work Type Templates
+Specialized templates with pre-defined phases and **verifiable promises**:
 
-### /ralph-planner:help
-Shows this help message.
+- `/ralph-planner:feature "<description>"` - New feature implementation
+- `/ralph-planner:bugfix "<description>"` - Bug fix with regression test
+- `/ralph-planner:refactor "<description>"` - Code refactoring
+- `/ralph-planner:migration "<description>"` - Data/code migration
+- `/ralph-planner:performance "<description>"` - Performance optimization
+
+### Help
+- `/ralph-planner:help` - Show this help message
+
+## Template Benefits
+
+Each template includes:
+- **Pre-defined phases** optimized for the work type
+- **Verifiable promises** (not generic statements)
+- **Specific completion criteria** for each phase
+
+Example promises by type:
+- **feature**: "All new tests pass", "No regressions"
+- **bugfix**: "Bug no longer reproducible", "Regression test added"
+- **refactor**: "All existing tests still pass", "No behavior changes"
+- **migration**: "All data migrated correctly", "Rollback tested"
+- **performance**: "Metrics improved by X%", "Benchmarks documented"
 
 ## Example
 
 ```
-/ralph-planner:plan-loop "Implement user authentication with JWT"
+/ralph-planner:bugfix "Users can't login after password reset"
 ```
 
-This will generate a phased plan and output:
-```
-Ready to execute? Run:
-/ralph-wiggum:ralph-loop 15 "Implement JWT authentication"
-```
+Generates a plan with Reproduction → Root Cause → Fix → Verification phases.
 
 ## Requirements
 
-Requires the ralph-wiggum plugin to be installed for executing the generated loop commands.
-
-Install: https://github.com/anthropics/claude-code/tree/main/plugins/ralph-wiggum
+Requires ralph-wiggum plugin for executing generated loop commands.
 ```
