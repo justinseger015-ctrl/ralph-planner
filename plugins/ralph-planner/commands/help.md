@@ -1,3 +1,7 @@
+---
+description: "Display help documentation for the ralph-planner plugin"
+---
+
 # help
 
 Display help documentation for the ralph-planner plugin.

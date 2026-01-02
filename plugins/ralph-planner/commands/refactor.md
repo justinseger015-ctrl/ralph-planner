@@ -1,3 +1,7 @@
+---
+description: "Create a structured execution plan for refactoring code"
+---
+
 # refactor
 
 Create a structured execution plan for refactoring code.

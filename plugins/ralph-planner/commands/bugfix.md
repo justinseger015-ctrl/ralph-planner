@@ -1,3 +1,7 @@
+---
+description: "Create a structured execution plan for fixing a bug"
+---
+
 # bugfix
 
 Create a structured execution plan for fixing a bug.

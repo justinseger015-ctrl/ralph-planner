@@ -1,3 +1,7 @@
+---
+description: "Create a structured execution plan in Ralph Wiggum format"
+---
+
 # plan-loop
 
 Create a structured execution plan in Ralph Wiggum format for the given task.

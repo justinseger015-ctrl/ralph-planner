@@ -1,3 +1,7 @@
+---
+description: "Create a structured execution plan for a migration task"
+---
+
 # migration
 
 Create a structured execution plan for a migration task.

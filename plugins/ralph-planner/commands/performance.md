@@ -1,3 +1,7 @@
+---
+description: "Create a structured execution plan for performance optimization"
+---
+
 # performance
 
 Create a structured execution plan for performance optimization.

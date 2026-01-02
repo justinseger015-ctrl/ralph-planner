@@ -1,3 +1,7 @@
+---
+description: "Create a structured execution plan for implementing a new feature"
+---
+
 # feature
 
 Create a structured execution plan for implementing a new feature.
