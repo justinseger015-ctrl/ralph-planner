@@ -114,6 +114,23 @@ If `--output <path>` was provided:
 
 After saving, **display the execution commands in the chat** so the user can copy them.
 
+### Step 7: STOP - Do Not Execute
+
+**CRITICAL:** After completing steps 1-6, you are DONE.
+
+⛔ **DO NOT:**
+- Start implementing any tasks
+- Run any ralph-loop commands
+- Begin coding or making changes
+- Execute anything from the plan
+
+✅ **DO:**
+- Display the plan summary
+- Show the execution commands for the user to copy
+- Wait for the user to manually run the commands
+
+The user will copy and run the ralph-loop command themselves when ready.
+
 ## Examples
 
 ```
