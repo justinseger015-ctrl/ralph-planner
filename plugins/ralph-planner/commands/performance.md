@@ -71,9 +71,11 @@ Generate a plan with these specific phases:
 
 ### Generate Loop Command
 
+**IMPORTANT:** Always include DONE condition with verifiable promises!
+
 ```
 Ready to execute? Run:
-/ralph-wiggum:ralph-loop [estimated iterations] "Optimize: [area]"
+/ralph-wiggum:ralph-loop [estimated iterations] "Optimize: [area]. DONE when: performance improved vs baseline, no functional regressions, benchmarks documented"
 ```
 
 ### Guidelines

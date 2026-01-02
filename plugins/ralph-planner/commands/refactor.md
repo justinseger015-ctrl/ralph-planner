@@ -71,9 +71,11 @@ Generate a plan with these specific phases:
 
 ### Generate Loop Command
 
+**IMPORTANT:** Always include DONE condition with verifiable promises!
+
 ```
 Ready to execute? Run:
-/ralph-wiggum:ralph-loop [estimated iterations] "Refactor: [component]"
+/ralph-wiggum:ralph-loop [estimated iterations] "Refactor: [component]. DONE when: all existing tests pass, no behavior changes, code meets target structure"
 ```
 
 ### Guidelines

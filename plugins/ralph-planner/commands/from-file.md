@@ -77,9 +77,25 @@ Output format:
 
 ### Step 5: Generate Loop Command
 
+**IMPORTANT:** Always include the DONE condition with verifiable promises in the command!
+
 ```
 Ready to execute? Run:
-/ralph-wiggum:ralph-loop [estimated iterations] "[brief summary]"
+/ralph-wiggum:ralph-loop [estimated iterations] "[brief summary]. DONE when: [list key completion criteria from the plan]"
+```
+
+Example output:
+```
+/ralph-wiggum:ralph-loop 42 "Implement auth features. DONE when: login works, tests pass, --help updated"
+```
+
+If the plan has multiple phases, generate a command for each:
+```
+# Phase 1 (recommended start):
+/ralph-wiggum:ralph-loop [phase1 iterations] "[phase1 summary]. DONE when: [phase1 criteria]"
+
+# All phases:
+/ralph-wiggum:ralph-loop [total iterations] "[full summary]. DONE when: [all key criteria]"
 ```
 
 ## Examples

@@ -69,9 +69,11 @@ Generate a plan with these specific phases:
 
 ### Generate Loop Command
 
+**IMPORTANT:** Always include DONE condition with verifiable promises!
+
 ```
 Ready to execute? Run:
-/ralph-wiggum:ralph-loop [estimated iterations] "[feature name]"
+/ralph-wiggum:ralph-loop [estimated iterations] "[feature name]. DONE when: feature works as specified, all new tests pass, no regressions, documentation updated"
 ```
 
 ### Guidelines

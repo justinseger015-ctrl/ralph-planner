@@ -55,11 +55,13 @@ Output a plan with this exact structure:
 
 ### Step 3: Generate the Loop Command
 
+**IMPORTANT:** Always include DONE condition with verifiable promises from the plan!
+
 After the plan, output:
 
 ```
 Ready to execute? Run:
-/ralph-wiggum:ralph-loop [estimated iterations] "[brief task summary]"
+/ralph-wiggum:ralph-loop [estimated iterations] "[brief task summary]. DONE when: [list key completion criteria from the plan]"
 ```
 
 ### Guidelines

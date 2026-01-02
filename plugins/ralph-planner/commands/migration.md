@@ -72,9 +72,11 @@ Generate a plan with these specific phases:
 
 ### Generate Loop Command
 
+**IMPORTANT:** Always include DONE condition with verifiable promises!
+
 ```
 Ready to execute? Run:
-/ralph-wiggum:ralph-loop [estimated iterations] "Migrate: [subject]"
+/ralph-wiggum:ralph-loop [estimated iterations] "Migrate: [subject]. DONE when: all items migrated, application functional, data integrity verified, rollback tested"
 ```
 
 ### Guidelines
