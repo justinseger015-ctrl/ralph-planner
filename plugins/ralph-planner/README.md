@@ -89,7 +89,16 @@ The command reads your file, auto-detects the work type (or uses `--type`), and 
 1. Choose a template matching your work type (or use generic `plan-loop`)
 2. The plugin generates phases with clear completion criteria
 3. It calculates iterations estimate (`tasks × 3`)
-4. It outputs the ready-to-run `/ralph-wiggum:ralph-loop` command
+4. It outputs ready-to-run commands **with DONE conditions included**
+
+### Generated Command Example
+
+```
+Ready to execute? Run:
+/ralph-wiggum:ralph-loop 42 "Implement auth feature. DONE when: feature works as specified, all new tests pass, no regressions, documentation updated"
+```
+
+The **DONE condition** tells ralph-wiggum when to stop the loop, preventing infinite execution.
 
 ## Why Templates?
 
