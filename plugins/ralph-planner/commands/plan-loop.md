@@ -51,6 +51,9 @@ Output a plan with this exact structure:
 **Estimated Iterations:** [count × 3]
 
 🏷️ **Promise Tag:** I will complete all phases systematically, validating each completion criteria before moving to the next phase.
+
+⚠️ **Completion Signal:** When ALL criteria above are met, output:
+<promise>COMPLETE</promise>
 ```
 
 ### Step 3: Generate the Loop Command

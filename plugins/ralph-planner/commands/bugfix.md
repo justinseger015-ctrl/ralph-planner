@@ -66,6 +66,9 @@ Generate a plan with these specific phases:
 - Regression test is added and passes
 - All existing tests still pass
 - No new issues introduced
+
+⚠️ **Completion Signal:** When ALL criteria above are met, output:
+<promise>COMPLETE</promise>
 ```
 
 ### Generate Loop Command

@@ -65,6 +65,9 @@ Generate a plan with these specific phases:
 - Feature works as specified in requirements
 - No regressions in existing tests
 - Code follows project patterns
+
+⚠️ **Completion Signal:** When ALL criteria above are met, output:
+<promise>COMPLETE</promise>
 ```
 
 ### Generate Loop Command

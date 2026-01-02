@@ -77,6 +77,9 @@ Output format:
 **Estimated Iterations:** [count × 3]
 
 🏷️ **Promise Tag:** [Verifiable promises from template]
+
+⚠️ **Completion Signal:** When ALL criteria above are met, output:
+<promise>COMPLETE</promise>
 ```
 
 ### Step 5: Generate Loop Command

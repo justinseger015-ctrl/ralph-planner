@@ -67,6 +67,9 @@ Generate a plan with these specific phases:
 - No functional behavior has changed
 - Code structure meets the stated goals
 - No performance degradation
+
+⚠️ **Completion Signal:** When ALL criteria above are met, output:
+<promise>COMPLETE</promise>
 ```
 
 ### Generate Loop Command

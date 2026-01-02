@@ -68,6 +68,9 @@ Generate a plan with these specific phases:
 - Application functions normally with migrated state
 - Data integrity verified
 - Rollback procedure documented and tested
+
+⚠️ **Completion Signal:** When ALL criteria above are met, output:
+<promise>COMPLETE</promise>
 ```
 
 ### Generate Loop Command
