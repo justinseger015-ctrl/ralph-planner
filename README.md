@@ -212,6 +212,46 @@ Templates provide:
 - **Verifiable DONE conditions** ("All tests pass" vs "I'll do my best")
 - **Exit criteria** that tell the loop when to stop
 
+## How It Works
+
+Understanding the workflow is important:
+
+### What ralph-planner does
+
+1. **Generates a detailed plan** (phases, tasks, criteria) — for YOU to review
+2. **Creates a summary prompt** with DONE conditions — for ralph-loop to execute
+
+### What ralph-loop receives
+
+Ralph-loop only receives the **summary prompt**, not the detailed plan:
+
+```
+/ralph-wiggum:ralph-loop "Implement auth. DONE when: login works, tests pass..."
+```
+
+Claude in the loop sees this summary, not the 4 phases with 15 tasks.
+
+### When to use `--output`
+
+For **complex tasks**, save the plan to a file so Claude can reference it:
+
+```bash
+# 1. Generate and save plan
+/ralph-planner:feature "Add authentication" --output "./plans/auth.md"
+
+# 2. Generated command references the file
+/ralph-wiggum:ralph-loop "Implement auth from ./plans/auth.md. DONE when: ..."
+```
+
+Now Claude can **read the plan file** during execution to see detailed phases and tasks.
+
+### Simple vs Complex
+
+| Task Complexity | Recommendation |
+|-----------------|----------------|
+| Simple (1-5 tasks) | Summary prompt is enough |
+| Complex (10+ tasks, multiple phases) | Use `--output` for detailed reference |
+
 ## How It Fits the Ralph Ecosystem
 
 | Tool | Role |
