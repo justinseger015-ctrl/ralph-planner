@@ -29,11 +29,11 @@ The #1 reason loops run forever: **no verifiable exit criteria**.
 Ralph Planner generates commands with **specific DONE conditions**:
 
 ```
-# Bad (runs forever)
-/ralph-wiggum:ralph-loop 30 "Implement auth"
+# Bad (runs forever - no completion promise)
+/ralph-wiggum:ralph-loop "Implement auth" --max-iterations 30
 
 # Good (knows when to stop)
-/ralph-wiggum:ralph-loop 30 "Implement auth. DONE when: POST /login returns 200 with valid JWT, all tests pass, invalid credentials return 401"
+/ralph-wiggum:ralph-loop "Implement auth. DONE when: POST /login returns 200 with valid JWT, all tests pass, invalid credentials return 401. Output <promise>COMPLETE</promise> when done." --completion-promise "COMPLETE" --max-iterations 30
 ```
 
 Every template includes verifiable promises like:
@@ -99,7 +99,7 @@ Estimated iterations: 30
 ### Ready-to-run command
 
 ```
-/ralph-wiggum:ralph-loop 30 "Implement JWT auth. DONE when: POST /login returns JWT, protected routes reject invalid tokens, all tests pass"
+/ralph-wiggum:ralph-loop "Implement JWT auth. DONE when: POST /login returns JWT, protected routes reject invalid tokens, all tests pass. Output <promise>COMPLETE</promise> when done." --completion-promise "COMPLETE" --max-iterations 30
 ```
 
 **Plan → Execute → Converge**
