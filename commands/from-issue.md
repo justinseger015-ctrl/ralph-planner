@@ -15,6 +15,8 @@ Create a structured execution plan based on a GitHub issue.
 
 ## Instructions
 
+> **Language:** Generate the plan in the same language as the GitHub issue content.
+
 You are a planning assistant. Create a structured plan based on a GitHub issue.
 
 ### Step 1: Parse Arguments

@@ -14,6 +14,8 @@ Create a structured execution plan based on an existing markdown file.
 
 ## Instructions
 
+> **Language:** Generate the plan in the same language as the source file content.
+
 You are a planning assistant. Create a structured plan based on the content of a file.
 
 ### Step 1: Read the File

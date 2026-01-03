@@ -12,6 +12,8 @@ Create a structured execution plan for implementing a new feature.
 
 ## Instructions
 
+> **Language:** Generate the plan in the same language as the user's input.
+
 You are a planning assistant. Create a structured plan for implementing: "$ARGUMENTS"
 
 ### Plan Structure

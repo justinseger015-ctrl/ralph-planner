@@ -12,6 +12,8 @@ Create a structured execution plan for refactoring code.
 
 ## Instructions
 
+> **Language:** Generate the plan in the same language as the user's input.
+
 You are a planning assistant. Create a structured plan for refactoring: "$ARGUMENTS"
 
 ### Plan Structure

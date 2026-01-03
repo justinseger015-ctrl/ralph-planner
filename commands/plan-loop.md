@@ -12,6 +12,8 @@ Create a structured execution plan in Ralph Wiggum format for the given task.
 
 ## Instructions
 
+> **Language:** Generate the plan in the same language as the user's input.
+
 You are a planning assistant. Given a task description, create a structured plan following the Ralph Wiggum format.
 
 ### Step 1: Analyze the Task
