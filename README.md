@@ -4,15 +4,17 @@
 
 > Turn a vague task into a clear execution plan — then run it in a loop.
 
-## The Problem
+## Why Planning Matters
 
-Ralph Wiggum loops are powerful, but they often fail because of **bad prompts**:
+[Ralph Wiggum](https://github.com/anthropics/claude-code/tree/main/plugins/ralph-wiggum) is a powerful loop execution plugin that iterates until a task is complete.
 
-- Unclear scope
-- No definition of done
-- Infinite or wasteful iterations
+For complex tasks, having a structured plan before starting the loop helps:
 
-**Ralph Planner fixes this by adding a planning layer before the loop runs.**
+- Define clear scope and phases upfront
+- Set verifiable completion criteria
+- Estimate iterations more accurately
+
+Ralph Planner generates structured plans designed to integrate with ralph-wiggum loops.
 
 ## Quick Start
 
