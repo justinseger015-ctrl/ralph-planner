@@ -112,28 +112,25 @@ Using the selected template, generate a structured plan:
 
 ### Step 6: Generate Loop Command
 
-**IMPORTANT:**
-1. Always include the DONE condition with verifiable promises
-2. Reference the issue number in the summary
-3. If `--output` was used, include the **plan file path**
+After the plan, output the ready-to-run command using the correct ralph-wiggum format:
 
 **Format (with --output):**
 ```
-/ralph-wiggum:ralph-loop [iterations] "Implement #[issue] from [plan-path]. DONE when: [criteria]"
+/ralph-wiggum:ralph-loop "Implement #[issue] from [plan-path]. DONE when: [criteria]. Output <promise>COMPLETE</promise> when done." --completion-promise "COMPLETE" --max-iterations [iterations]
 ```
 
 **Format (without --output):**
 ```
-/ralph-wiggum:ralph-loop [iterations] "Implement #[issue]: [summary]. DONE when: [criteria]"
+/ralph-wiggum:ralph-loop "Implement #[issue]: [summary]. DONE when: [criteria]. Output <promise>COMPLETE</promise> when done." --completion-promise "COMPLETE" --max-iterations [iterations]
 ```
 
 **Examples:**
 ```
 # With --output:
-/ralph-wiggum:ralph-loop 42 "Implement #123 from ./plans/issue-123.md. DONE when: all tests pass, feature works"
+/ralph-wiggum:ralph-loop "Implement #123 from ./plans/issue-123.md. DONE when: all tests pass, feature works. Output <promise>COMPLETE</promise> when done." --completion-promise "COMPLETE" --max-iterations 42
 
 # Without --output:
-/ralph-wiggum:ralph-loop 42 "Implement #123: Add dark mode. DONE when: dark mode toggle works, theme persists"
+/ralph-wiggum:ralph-loop "Implement #123: Add dark mode. DONE when: dark mode toggle works, theme persists. Output <promise>COMPLETE</promise> when done." --completion-promise "COMPLETE" --max-iterations 42
 ```
 
 ### Step 7: Save Plan (if --output specified)
